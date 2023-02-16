@@ -124,6 +124,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-bottom: 80px;
 }
 .chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont {
   position: relative;
@@ -190,22 +191,26 @@
   padding: 10px;
   outline: none;
   border: none;
-  background-color: #ededed;
+  background-color: rgba(154, 154, 154, 0.3254901961);
+  box-shadow: 0px 0px 15px -9px #000000;
 }
 .chatScreen-wrapper .chat-input-cont .chat-input .chat-textField::-moz-placeholder {
   text-align: left;
   font-weight: 500;
-  font-size: 0.95em;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.7215686275);
 }
 .chatScreen-wrapper .chat-input-cont .chat-input .chat-textField:-ms-input-placeholder {
   text-align: left;
   font-weight: 500;
-  font-size: 0.95em;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.7215686275);
 }
 .chatScreen-wrapper .chat-input-cont .chat-input .chat-textField::placeholder {
   text-align: left;
   font-weight: 500;
-  font-size: 0.95em;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.7215686275);
 }
 .chatScreen-wrapper .chat-input-cont .chat-input .chat-option {
   display: flex;
