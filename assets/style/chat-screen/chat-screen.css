@@ -1,12 +1,32 @@
-.chatScreen-wrapper {
+.desktop-chatScreen-wrapper {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .desktop-chatScreen-wrapper {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mobile-chatScreen-wrapper {
+    display: none;
+  }
+}
+
+.chat-cont2 {
+  display: none;
+}
+
+.mobile-chatScreen-wrapper, .desktop-chatScreen-wrapper {
   padding: 0 10px;
-  min-width: 300px;
-  height: 100vh;
-  position: relative;
-  margin: auto;
   font-family: "Poppins", sans-serif;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head {
+.mobile-chatScreen-wrapper .chatScreen-ui, .desktop-chatScreen-wrapper .chatScreen-ui {
+  position: relative;
+  width: 100%;
+}
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -15,31 +35,42 @@
   padding: 0.8rem 0;
   margin-bottom: -9px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head .back-icon {
+@media screen and (min-width: 720px) {
+  .mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head {
+    padding: 0.6rem 5rem;
+    justify-content: space-between;
+  }
+}
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .back-icon, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .back-icon {
   cursor: pointer;
   font-size: 25px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head .more-icon {
+@media screen and (min-width: 900px) {
+  .mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .back-icon, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .back-icon {
+    display: none;
+  }
+}
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .more-icon, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .more-icon {
   cursor: pointer;
   font-size: 25px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img {
   cursor: pointer;
   position: relative;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img .chatScreenUser-img {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img .chatScreenUser-img, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img .chatScreenUser-img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img .online-indicator {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img .online-indicator, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .user-details .chatScreenProfile-img .online-indicator {
   position: absolute;
   top: 0;
   right: 0;
@@ -49,35 +80,21 @@
   background-color: green;
   border: 2px solid white;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-head .chatScreenUser-info .username .username-text {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head .chatScreenUser-info .username .username-text, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head .chatScreenUser-info .username .username-text {
   font-size: 0.85em;
   font-weight: 500;
   text-transform: capitalize;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont {
   margin-top: 0px;
   padding: 10px 0px;
 }
-@media screen and (min-width: 720px) {
-  .chatScreen-wrapper .chatScreen-ui .chatScreen-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .chatScreen-body {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .chatScreen-body, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .chatScreen-body {
   padding: 10px 0;
   border-radius: 15px;
-  background-color: rgba(206, 202, 202, 0.1019607843);
+  background-color: rgba(186, 186, 186, 0.1019607843);
 }
-@media screen and (min-width: 720px) {
-  .chatScreen-wrapper .chatScreen-ui .chatScreen-cont .chatScreen-body {
-    padding: 10px 40px;
-    width: 90%;
-  }
-}
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .chatSecondary-time {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .chatSecondary-time, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .chatSecondary-time {
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 10px;
@@ -85,30 +102,30 @@
   font-size: 0.8em;
   opacity: 0.5;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg {
   margin-bottom: 15px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont {
   position: relative;
   margin: 4px 0;
   background-color: rgba(200, 205, 200, 0.431372549);
   padding: 15px 9px;
-  width: 250px;
+  width: 80%;
   border-radius: 15px 15px 15px 0;
 }
-@media screen and (min-width: 720px) {
-  .chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont {
-    width: 500px;
+@media screen and (min-width: 600px) {
+  .mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont {
+    width: 60%;
   }
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont .recieverMsg {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont .recieverMsg, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont .recieverMsg {
   word-break: break-word;
   color: black;
   font-size: 0.85em;
   line-height: 1.3;
   padding: 2px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont .recieverMsg-prop {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont .recieverMsg-prop, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainReciever-msg .recieverMsg-Cont .recieverMsg-prop {
   position: absolute;
   bottom: 0px;
   display: flex;
@@ -120,32 +137,33 @@
   font-weight: 500;
   color: rgba(45, 41, 41, 0.7058823529);
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-bottom: 80px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont {
   position: relative;
   padding: 15px 9px;
   margin: 2px 0;
   background-color: rgba(0, 128, 0, 0.753);
-  width: 250px;
+  width: 80%;
   border-radius: 15px 15px 0 15px;
 }
-@media screen and (min-width: 720px) {
-  .chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont {
-    width: 500px;
+@media screen and (min-width: 600px) {
+  .mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont {
+    width: 60%;
   }
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg {
   word-break: break-word;
   color: white;
   font-size: 0.85em;
   line-height: 1.3;
   padding: 2px;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop {
   position: absolute;
   bottom: 0px;
   right: 10px;
@@ -157,34 +175,35 @@
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7058823529);
 }
-@media screen and (min-width: 720px) {
-  .chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop {
-    padding: 5px;
-  }
-}
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop .senderMsg-tick .double-tick {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop .senderMsg-tick .double-tick, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop .senderMsg-tick .double-tick {
   font-size: 1.4em;
 }
-.chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop .senderMsg-tick .single-tick {
+.mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop .senderMsg-tick .single-tick, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-cont .mainSender-msg .senderMsg-Cont .senderMsg-prop .senderMsg-tick .single-tick {
   font-size: 1.4em;
 }
-.chatScreen-wrapper .chat-input-cont {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-}
-.chatScreen-wrapper .chat-input-cont .chat-input {
-  display: flex;
-  align-items: flex-end;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9803921569);
+  background-color: white;
   position: fixed;
   bottom: 0px;
+}
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
+  width: 100%;
   padding: 8px 9px 20px 9px;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-textField {
-  width: 65vw;
+@media screen and (min-width: 900px) {
+  .mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input {
+    width: 55%;
+  }
+}
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField {
+  width: 100%;
   max-height: 100px;
   border-radius: 10px;
   padding: 10px;
@@ -192,22 +211,22 @@
   border: none;
   background-color: #ededed;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-textField::-moz-placeholder {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField::-moz-placeholder, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField::-moz-placeholder {
   text-align: left;
   font-weight: 500;
   font-size: 0.95em;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-textField:-ms-input-placeholder {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField:-ms-input-placeholder, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField:-ms-input-placeholder {
   text-align: left;
   font-weight: 500;
   font-size: 0.95em;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-textField::placeholder {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField::placeholder, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-textField::placeholder {
   text-align: left;
   font-weight: 500;
   font-size: 0.95em;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-option {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -215,12 +234,7 @@
   padding: 0 4px;
   margin-left: 3px;
 }
-@media screen and (min-width: 720px) {
-  .chatScreen-wrapper .chat-input-cont .chat-input .chat-option {
-    gap: 30px;
-  }
-}
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-option .sender .send-btn {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .sender .send-btn, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .sender .send-btn {
   cursor: pointer;
   border: none;
   outline: none;
@@ -228,13 +242,13 @@
   background: transparent;
   font-size: 1.3em;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-option .inputLabel {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .inputLabel, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .inputLabel {
   cursor: pointer;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-option .inputLabel .file-share {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .inputLabel .file-share, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .inputLabel .file-share {
   display: none;
 }
-.chatScreen-wrapper .chat-input-cont .chat-input .chat-option .inputLabel .pic-icon {
+.mobile-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .inputLabel .pic-icon, .desktop-chatScreen-wrapper .chatScreen-ui .chat-input-cont .chat-input .chat-option .inputLabel .pic-icon {
   cursor: pointer;
   font-size: 1.3em;
 }/*# sourceMappingURL=chat-screen.css.map */
