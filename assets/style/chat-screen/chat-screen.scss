@@ -43,8 +43,9 @@
             .chatScreen-head{
                 position: fixed;
                 top: 0;
+                // left: 0;
                 background-color:white;
-                // width: 100%;
+                width: 100%;
                 z-index: 3;
                 display: flex;
                 align-items: center;
@@ -52,12 +53,15 @@
                 gap:70px;
                 // background-color: red;
                 border-bottom: 1px solid #0000001a;
-                padding: 0.8rem 0.1rem;
+                padding: 0.8rem 0rem;
                 margin-bottom: -9px;
 
-                @media screen and (min-width:720px){
+                @media screen and (min-width:900px){
+                    // left: 363px;
+                    // left: auto;
                     padding: 0.6rem 5rem;
                     justify-content: space-between;
+                    // background-color: red;
                     width: 60%;
                     }
     

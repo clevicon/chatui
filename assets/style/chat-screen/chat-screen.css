@@ -30,16 +30,17 @@
   position: fixed;
   top: 0;
   background-color: white;
+  width: 100%;
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 70px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
-  padding: 0.8rem 0.1rem;
+  padding: 0.8rem 0rem;
   margin-bottom: -9px;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 900px) {
   .mobile-chatScreen-wrapper .chatScreen-ui .chatScreen-head, .desktop-chatScreen-wrapper .chatScreen-ui .chatScreen-head {
     padding: 0.6rem 5rem;
     justify-content: space-between;
